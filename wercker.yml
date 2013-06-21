@@ -1,0 +1,6 @@
+box : wercker/default
+build:
+  steps:
+    - script:
+        name: check
+        code: ls -a
