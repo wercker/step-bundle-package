@@ -8,14 +8,7 @@ More information:
 - http://gembundler.com/v1.3/bundle_package.html
 - http://gembundler.com/v1.3/man/bundle-package.1.html
 
-## Arguments
+## Options
 
-### noprune
-- type: boolean
-- optional: true (default: false)
-- description: Don't remove stale gems from the cache.
-
-### all
-- type: boolean
-- optional: true (default: true)
-- description: Package `:git`, `:path` and `.gem` dependencies.
+* `noprune` (optional, default: false) Don't remove stale gems from the cache.
+* `all` (optional, default: true) Package `:git`, `:path` and `.gem` dependencies.
