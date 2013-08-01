@@ -5,6 +5,7 @@ A wercker step to execute the `bundle package` command. The `bundle package` ste
 You should have bundler installed.
 
 More information:
+
 - http://gembundler.com/v1.3/bundle_package.html
 - http://gembundler.com/v1.3/man/bundle-package.1.html
 
