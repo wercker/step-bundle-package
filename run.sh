@@ -9,7 +9,6 @@ else
 fi
 
 bundle_command="bundle package"
-bundle_working_path=""
 
 # Parse some variable arguments
 if [ "$WERCKER_BUNDLE_PACKAGE_NOPRUNE" = "true" ] ; then
@@ -20,21 +19,11 @@ if [ "$WERCKER_BUNDLE_PACKAGE_ALL" = "true" ] ; then
     bundle_command="$bundle_command --all"
 fi
 
-# Figure out the working directory
-if [ -n "$WERCKER_BUNDLE_PACKAGE_PATH" ] ; then
-  bundle_working_path="$WERCKER_BUNDLE_PACKAGE_PATH"
-else
-  bundle_working_path="$WERCKER_SOURCE_DIR"
-fi
-
 # Stop processing if the working path was not found
-if [ ! -e "$bundle_working_path/Gemfile" ] && [ ! -e "$bundle_working_path/gemfile" ] ; then
-    warn "Skipping bundle package because Gemfile was not found in $bundle_working_path"
+if [ ! -e "$PWD/Gemfile" ] ; then
+    warn "Skipping bundle package because Gemfile was not found in $PWD"
 else
     debug "Gemfile and bundler found."
-
-    info "Switching to path: $bundle_working_path"
-    cd $bundle_working_path
 
     debug "$bundle_command"
     $bundle_command
