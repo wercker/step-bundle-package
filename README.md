@@ -9,7 +9,21 @@ More information:
 - http://gembundler.com/v1.3/bundle_package.html
 - http://gembundler.com/v1.3/man/bundle-package.1.html
 
-## Options
+# What's new
 
-* `noprune` (optional, default: false) Don't remove stale gems from the cache.
-* `all` (optional, default: true) Package `:git`, `:path` and `.gem` dependencies.
+- Remove PATH support, use cwd instead 
+
+# Options
+
+- `noprune` (optional, default: false) Don't remove stale gems from the cache.
+- `all` (optional, default: true) Package `:git`, `:path` and `.gem` dependencies.
+
+# Changelog
+
+## 0.0.3
+
+- Remove PATH support, use cwd instead 
+
+## 0.0.2
+
+- Initial release
