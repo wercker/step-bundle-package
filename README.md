@@ -18,6 +18,10 @@ More information:
 - `noprune` (optional, default: false) Don't remove stale gems from the cache.
 - `all` (optional, default: true) Package `:git`, `:path` and `.gem` dependencies.
 
+# License
+
+The MIT License (MIT)
+
 # Changelog
 
 ## 0.0.3
